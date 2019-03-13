@@ -116,16 +116,20 @@ def game_hash
   }
 end
 
-def num_points_scored(player)
+def iterate_though_game_hash(looking_for)
   game_hash.each do |location, team_data|
     team_data.each do |data_type, data|
-      if data_type.to_s == "players"
-        data.each do |player_name, stat|
-          if player_name == player
-            return stat[:points]
-          end
-        end
+      if data_type.to_s == looking_for
+        return data
       end
+    end
+  end
+end
+
+def num_points_scored(player)
+  iterate_through_game_hash("players").each do |player_name, stat|
+    if player_name == player
+      return stat[:points]
     end
   end
 end
