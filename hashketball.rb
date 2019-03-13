@@ -172,7 +172,7 @@ end
 def player_stats(player)
   players.each do |player_name, stat|
     if player_name == player
-      return data[player_name]
+      return players[player_name]
     end
   end
 end
