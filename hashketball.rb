@@ -163,8 +163,8 @@ def team_names
       if data_type.to_s == "team_name"
         teams << data
       end
-      return teams
       binding.pry
+      return teams
     end
   end
 end
