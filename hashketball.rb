@@ -190,11 +190,10 @@ def player_stats(player)
       if data_type.to_s == "players"
         data.each do |player_name, stat|
           if player_name == player
-            player_name[stat]
+            return player_name[stat]
           end
         end
       end
     end
   end
-  return stats
 end
