@@ -130,7 +130,7 @@ def num_points_scored(player)
   data = iterate_through_game_hash("players")
   data.each do |player_name, stat|
     if player_name == player
-      return player[stat][:points]
+      return stat
     end
   end
 end
