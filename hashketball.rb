@@ -199,17 +199,15 @@ def player_stats(player)
 end
 
 def big_shoe_rebounds
-  shoe_sizes = []
+  shoe_sizes = {}
   game_hash.each do |location, team_data|
     team_data.each do |data_type, data|
       if data_type.to_s == "players"
         data.each do |player_name, stat|
-          shoe_sizes << stat[:shoe]
+          binding.pry
+          shoe_sizes[player_name] = stat[:shoe]
         end
       end
     end
   end
-  binding.pry
-  player_with_biggest_shoes = shoe_sizes.sort[-1]
-  player_stats(player_with_biggest_shoes)[:rebounds]
 end
