@@ -210,5 +210,5 @@ def big_shoe_rebounds
     end
   end
   binding.pry
-  shoe_sizes.max_by{|name, size| size}
+  shoe_sizes.max_by{|name, size| size}[0]
 end
