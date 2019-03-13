@@ -210,5 +210,17 @@ def big_shoe_rebounds
     end
   end
   binding.pry
-  shoe_sizes.max_by{|name, size| size}[0]
+  biggest_shoe_player = shoe_sizes.max_by{|name, size| size}[0]
+  
+  game_hash.each do |location, team_data|
+    team_data.each do |data_type, data|
+      if data_type.to_s == "players"
+        data.each do |player_name, stat|
+          if player_name == biggest_shoe_player
+            return stat[:rebounds]
+          end
+        end
+      end
+    end
+  end
 end
