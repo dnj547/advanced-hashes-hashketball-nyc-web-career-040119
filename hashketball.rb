@@ -160,8 +160,8 @@ def team_names
   game_hash.each do |location, team_data|
     team_data.each do |data_type, data|
       if data_type.to_s == "team_name"
-        return data
         binding.pry
+        return data
       end
     end
   end
