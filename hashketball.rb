@@ -163,7 +163,7 @@ def team_names
         teams = []
         teams << data
       end
-      return teams
     end
   end
+  return teams
 end
