@@ -157,10 +157,10 @@ def team_colors(team)
 end
 
 def team_names
+  teams = []
   game_hash.each do |location, team_data|
     team_data.each do |data_type, data|
       if data_type.to_s == "team_name"
-        teams = []
         teams << data
       end
       return teams
