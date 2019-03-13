@@ -191,7 +191,7 @@ def player_stats(player)
         data.each do |player_name, stat|
           if player_name == player
             binding.pry
-            return stat
+            return data[player_name]
           end
         end
       end
