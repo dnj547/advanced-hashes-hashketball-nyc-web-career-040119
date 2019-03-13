@@ -119,13 +119,19 @@ end
 def iterate_through_game_hash(looking_for)
   game_hash.each do |location, team_data|
     team_data.each do |data_type, data|
-      puts data
+      if data_type.to_s == looking_for
+        return data
+      end
     end
   end
 end
 
 def num_points_scored(player)
-  iterate_through_game_hash("players")
+  iterate_through_game_hash("players").each do |player_name, stat|
+    if player_name == player
+      return stat[:points]
+    end
+  end
 end
 
 def shoe_size(player)
