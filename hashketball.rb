@@ -207,7 +207,7 @@ def winning_team
   game_hash[:away][:players].each do |player_name, stat|
     away_points << stat[:points]
   end
-  if home_points > away_points
+  if home_points.inject(0, :+) > away_points.inject(0, :+)
     game_hash[:home][:team_name]
   else
     game_hash[:away][:team_name]
