@@ -116,18 +116,12 @@ def game_hash
   }
 end
 
-def iterate_through_game_hash(looking_for)
-  game_hash.each do |location, team_data|
-    team_data.each do |data_type, data|
-      if data_type.to_s == looking_for
-        return data
-      end
-    end
-  end
+def players
+  game_hash[:home][:players].merge(game_hash[:away][:players])
 end
 
 def num_points_scored(player)
-  iterate_through_game_hash("players").each do |player_name, stat|
+  players.each do |player_name, stat|
     if player_name == player
       return stat[:points]
     end
