@@ -164,6 +164,7 @@ def team_names
         teams << data
       end
       return teams
+      binding.pry
     end
   end
 end
