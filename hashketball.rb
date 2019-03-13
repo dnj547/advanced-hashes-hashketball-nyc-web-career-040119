@@ -174,8 +174,10 @@ def player_numbers(team)
     team_data.each do |data_type, data|
       if data_type.to_s == "team_name"
         if data == team
-          numbers << team_data[:players]
-          binding.pry
+          team_data[:players].each do |player_name, stat|
+            numbers << stat[:number]
+            binding.pry
+          end
         end
       end
     end
