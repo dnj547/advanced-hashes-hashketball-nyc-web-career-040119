@@ -127,7 +127,8 @@ def iterate_through_game_hash(looking_for)
 end
 
 def num_points_scored(player)
-  iterate_through_game_hash("players").each do |player_name, stat|
+  data = iterate_through_game_hash("players")
+  data.each do |player_name, stat|
     if player_name == player
       return stat[:points]
     end
