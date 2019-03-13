@@ -221,3 +221,11 @@ player_names = []
   end
 player_names.max_by(&:length)
 end
+
+def long_name_steals_a_ton?
+  steals_hash = {}
+  players.each do |player_name, stat|
+    steals_hash[player_name] = stat[:steals]
+  end
+  steals_array.max_by{|name, number| number}[0] == player_with_longest_name
+end
