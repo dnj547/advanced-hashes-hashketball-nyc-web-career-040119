@@ -127,9 +127,7 @@ def iterate_through_game_hash(looking_for)
 end
 
 def num_points_scored(player)
-  iterate_through_game_hash("players").each do |player_name, stat|
-    puts player_name
-  end
+  iterate_through_game_hash("players")
 end
 
 def shoe_size(player)
