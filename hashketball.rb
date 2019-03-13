@@ -197,3 +197,18 @@ def player_stats(player)
     end
   end
 end
+
+def big_shoe_rebounds
+  shoe_sizes = []
+  game_hash.each do |location, team_data|
+    team_data.each do |data_type, data|
+      if data_type.to_s == "players"
+        data.each do |player_name, stat|
+          shoe_sizes << stat[:shoe]
+        end
+      end
+    end
+  end
+  player_with_biggest_shoes = shoe_sizes.sort[-1]
+  player_stats(player_with_biggest_shoes)[:rebounds]
+end
