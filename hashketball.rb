@@ -164,6 +164,6 @@ def team_names
         teams << data
       end
     end
+    return teams
   end
-  return teams
 end
