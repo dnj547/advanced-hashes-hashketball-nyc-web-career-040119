@@ -197,3 +197,7 @@ def most_points_scored
   end
   points_scored.max_by{|name, points| points}[0]
 end
+
+def winning_team
+  
+end
