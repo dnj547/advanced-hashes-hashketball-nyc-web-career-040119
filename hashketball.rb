@@ -120,7 +120,7 @@ def iterate_through_game_hash(looking_for)
   game_hash.each do |location, team_data|
     team_data.each do |data_type, data|
       if data_type.to_s == looking_for
-        data
+        return data
       end
     end
   end
