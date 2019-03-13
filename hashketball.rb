@@ -120,6 +120,7 @@ def iterate_through_game_hash(looking_for)
   game_hash.each do |location, team_data|
     team_data.each do |data_type, data|
       if data_type.to_s == looking_for
+        binding.pry
         data
       end
     end
@@ -131,7 +132,6 @@ def num_points_scored(player)
     if player_name == player
       return stat[:points]
     end
-    binding.pry
   end
 end
 
