@@ -204,10 +204,10 @@ def big_shoe_rebounds
     team_data.each do |data_type, data|
       if data_type.to_s == "players"
         data.each do |player_name, stat|
-          binding.pry
           shoe_sizes[player_name] = stat[:shoe]
         end
       end
     end
   end
+  binding.pry
 end
