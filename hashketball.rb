@@ -108,7 +108,7 @@ def game_hash
           rebounds: 12,
           assists: 12,
           steals: 22,
-          blocks: 55,
+          blocks: 5,
           slam_dunks: 12
         }
       }
