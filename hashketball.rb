@@ -205,11 +205,11 @@ def big_shoe_rebounds
       if data_type.to_s == "players"
         data.each do |player_name, stat|
           shoe_sizes << stat[:shoe]
-          binding.pry
         end
       end
     end
   end
+  binding.pry
   player_with_biggest_shoes = shoe_sizes.sort[-1]
   player_stats(player_with_biggest_shoes)[:rebounds]
 end
