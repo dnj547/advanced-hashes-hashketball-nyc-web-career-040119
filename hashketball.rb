@@ -167,3 +167,17 @@ def team_names
   end
   return teams
 end
+
+def player_numbers(team)
+  numbers = []
+  game_hash.each do |location, team_data|
+    team_data.each do |data_type, data|
+      if data_type.to_s == "team_name"
+        if data == team
+          numbers << team_data[:players]
+          binding.pry
+        end
+      end
+    end
+  end
+end
