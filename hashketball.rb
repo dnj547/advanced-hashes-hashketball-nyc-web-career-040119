@@ -162,8 +162,8 @@ def team_names
       if data_type.to_s == "team_name"
         teams = []
         teams << data
-        return teams
       end
+      return teams
     end
   end
 end
