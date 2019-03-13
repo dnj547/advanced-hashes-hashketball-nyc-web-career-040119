@@ -205,6 +205,7 @@ def big_shoe_rebounds
       if data_type.to_s == "players"
         data.each do |player_name, stat|
           shoe_sizes << stat[:shoe]
+          binding.pry
         end
       end
     end
