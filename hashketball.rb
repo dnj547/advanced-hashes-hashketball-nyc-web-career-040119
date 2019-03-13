@@ -119,7 +119,7 @@ end
 def iterate_through_game_hash(looking_for)
   game_hash.each do |location, team_data|
     team_data.each do |data_type, data|
-      data
+      puts data
     end
   end
 end
