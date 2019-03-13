@@ -170,15 +170,9 @@ def player_numbers(team)
 end
 
 def player_stats(player)
-  game_hash.each do |location, team_data|
-    team_data.each do |data_type, data|
-      if data_type.to_s == "players"
-        data.each do |player_name, stat|
-          if player_name == player
-            return data[player_name]
-          end
-        end
-      end
+  players.each do |player_name, stat|
+    if player_name == player
+      return data[player_name]
     end
   end
 end
