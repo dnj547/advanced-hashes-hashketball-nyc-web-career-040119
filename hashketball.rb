@@ -161,6 +161,7 @@ def team_names
     team_data.each do |data_type, data|
       if data_type.to_s == "team_name"
         return data
+        binding.pry
       end
     end
   end
